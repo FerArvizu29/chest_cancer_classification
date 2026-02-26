@@ -22,6 +22,9 @@ El conjunto de datos está compuesto por aproximadamente 1000 imágenes de tomog
 
 Se utilizaron imágenes médicas reales organizadas por categoría para entrenar y evaluar los modelos de clasificación.
 
+<img width="819" height="951" alt="image" src="https://github.com/user-attachments/assets/b31e47da-1269-43f5-bdd8-59b4a2cf51b9" />
+
+
 ---
 
 ## Balance de Clases
@@ -34,7 +37,14 @@ Las imágenes fueron divididas en tres subconjuntos:
 
 Posteriormente, se analizó la distribución de clases en cada subconjunto.
 
-Se identificó un ligero desbalance de clases, el cual fue mitigado mediante la asignación de pesos de clase (class weights) durante el entrenamiento. Esto permite que el modelo otorgue la misma importancia a todas las categorías y reduzca el sesgo hacia la clase mayoritaria.
+<img width="695" height="451" alt="image" src="https://github.com/user-attachments/assets/8c7b5327-e8a7-42b1-a1a1-53e3618bb1aa" />
+
+<img width="686" height="451" alt="image" src="https://github.com/user-attachments/assets/51e7eed1-cd0d-45fe-89db-3a9a66747428" />
+
+<img width="695" height="451" alt="image" src="https://github.com/user-attachments/assets/c5bcce84-d92e-4352-85a2-8ce64cde1ba3" />
+
+
+Se identificó un ligero desbalance de clases en el conjunto de entrenamiento, el cual fue mitigado mediante la asignación de pesos de clase (class weights) durante el entrenamiento. Esto permite que el modelo otorgue la misma importancia a todas las categorías y reduzca el sesgo hacia la clase mayoritaria.
 
 ---
 
@@ -44,11 +54,10 @@ Se identificó un ligero desbalance de clases, el cual fue mitigado mediante la 
 
 - Redimensionamiento de imágenes.
 - Normalización de valores de píxeles.
-- Aumento de datos (Data Augmentation) para mejorar la capacidad de generalización.
 
 ### 2. Transfer Learning
 
-- Uso de modelos preentrenados en ImageNet.
+- Uso de modelos preentrenados en ImageNet. EfficientNetB0, Xception y VGG16.
 - Congelación inicial de capas convolucionales.
 - Ajuste fino (Fine-Tuning) de las últimas capas.
 
@@ -70,7 +79,7 @@ Se identificó un ligero desbalance de clases, el cual fue mitigado mediante la 
 
 Se compararon distintos modelos preentrenados para determinar cuál presenta mejor desempeño en términos de precisión y capacidad de generalización.
 
-El modelo con mejor desempeño mostró:
+El modelo con mejor desempeño fue EfficientNetB0 **mostró:
 
 - Alta precisión en las tres clases.
 - Buen equilibrio entre recall y precisión.
