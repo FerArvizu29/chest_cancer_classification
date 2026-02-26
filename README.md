@@ -79,7 +79,7 @@ Se identificó un ligero desbalance de clases en el conjunto de entrenamiento, e
 
 Se compararon distintos modelos preentrenados para determinar cuál presenta mejor desempeño en términos de precisión y capacidad de generalización.
 
-El modelo con mejor desempeño fue EfficientNetB0 **mostró:
+El modelo con mejor desempeño fue EfficientNetB0 y mostró:
 
 - Alta precisión en las tres clases.
 - Buen equilibrio entre recall y precisión.
